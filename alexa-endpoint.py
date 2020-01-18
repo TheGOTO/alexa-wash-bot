@@ -219,7 +219,8 @@ sb.add_exception_handler(CatchAllExceptionHandler())
 
 handler = sb.lambda_handler()
 
-skill_response = SkillAdapter(skill=sb.create(), skill_id="amzn1.ask.skill.153a3e93-50d5-4821-b7f8-246b4dd0906b", app=app)
+skill_response = SkillAdapter(skill=sb.create(), skill_id="${{secrets.skill_id}}", app=app)
+#skill_response = SkillAdapter(skill=sb.create(), skill_id="amzn1.ask.skill.153a3e93-50d5-4821-b7f8-246b4dd0906b", app=app)
 
 skill_response.register(app=app, route="/")
 
