@@ -1,0 +1,11 @@
+Change Modbus Adress by command 10 see page 6 in SDM120-Modbus_protocol_V2.1.pdf
+
+40021
+Meter ID
+Float
+00
+14
+Ranges from 1 to 247,
+.Default ID is 1.
+
+
