@@ -29,7 +29,8 @@ def log_request():
 def read_wm_status():
 
 
-    query= "sqlite3 /home/pi/devel/wash-bot-alexa-skill/wash-bot.sqlite 'select value from waschmaschine where key=\"is_running\";'"
+#    query= "sqlite3 /home/pi/devel/wash-bot-alexa-skill/wash-bot.sqlite 'select value from waschmaschine where key=\"is_running\";'"
+    query= "sqlite3 /var/log/wash-bot-alexa-skill/wash-bot.sqlite 'select value from waschmaschine where key=\"is_running\";'"
 
     p = subprocess.Popen(query, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     is_running="False"
